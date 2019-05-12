@@ -1,6 +1,6 @@
 # CE-450 Lab 5 (2019 Spring)
 ---
-This repository is for Lab 4 submission.
+This repository is for Lab 5 submission.
  
 ## 1.1 Android Studio and DroidCafe
  
