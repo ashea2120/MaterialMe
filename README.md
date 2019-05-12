@@ -5,7 +5,7 @@ This repository is for Lab 5 submission.
 ## 1.1 Android Studio and DroidCafe
  
 This repo is for the following Practice Sets:
-- CodeLabs Android Fundamentals 05.3: Cards and Colors
+- CodeLabs Android Fundamentals 05.2: Cards and Colors
 - CodeLabs Android Fundamentals 05.3: Adaptive Layouts
  
 ## Issues and Lessons
