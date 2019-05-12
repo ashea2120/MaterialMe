@@ -1,44 +1,25 @@
-MaterialMe-Resource - Solution Code
-===================================
-
-The MaterialMe app is a mock Sports information app intended to teach principles
-of Material Design. It includes Cards with mixed media, including images loaded using the
-Glide library. It also uses the Floating Action Button and Material Design color palettes.
-This version includes resource qualifiers allow the Android Runtime to use alternate XML
-resource files depending on the device configuration.
-
-Pre-requisites
---------------
-
-For this app you should be familiar with:
-* Creating and running apps in Android Studio.
-* Creating and editing elements using the Layout Editor, XML, and programmatically.
-* Using a RecyclerView to display a list.
-* Using Glide to load images.
-* Using the Material Design palette.
-
-
-Getting Started
----------------
-
-1. Download and open the app in Android Studio.
-
-License
--------
-
-Copyright 2018 Google, Inc.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+# CE-450 Lab 5 (2019 Spring)
+---
+This repository is for Lab 4 submission.
+ 
+## 1.1 Android Studio and DroidCafe
+ 
+This repo is for the following Practice Sets:
+- CodeLabs Android Fundamentals 05.3: Cards and Colors
+- CodeLabs Android Fundamentals 05.3: Adaptive Layouts
+ 
+## Issues and Lessons
+ 
+A short description about the issues that you faced and the lessons that you learned.
+- Reinforced ideas learned in lab 4 about making custom objects - made a Sports object for this app
+- Learned how to load images with Glide 
+- Implemented a swipe to dismiss feature using the RecycleView
+- Implemented a drag and drop feature using a SimpleCallback
+- Learned how to further use a click listener with the DetailView
+- Learned how ot support landscape orientation with different sized screens
+- A few issues with this lab:
+  * When the extra layouts are added to make 3 rows appear on the tablet, the swiping feature breaks and doesn't get fixed with further lessons
+  * The layouts are preserved when rotating the device - there's no activity preservation 
+ 
+---
+Written by Ashley Shea
