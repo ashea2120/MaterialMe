@@ -32,6 +32,7 @@ import java.util.ArrayList;
 /***
  * The adapter class for the RecyclerView, contains the sports data.
  */
+//Based on the Adapter for that food app
 class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
 
     // Member variables.
@@ -61,8 +62,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
     @Override
     public SportsAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext)
-                .inflate(R.layout.list_item, parent, false));
+        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.list_item, parent, false));
     }
 
     /**
@@ -72,12 +72,11 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
      * @param position The adapter position.
      */
     @Override
-    public void onBindViewHolder(SportsAdapter.ViewHolder holder,
-                                 int position) {
+    public void onBindViewHolder(SportsAdapter.ViewHolder holder, int position) {
         // Get current sport.
         Sport currentSport = mSportsData.get(position);
 
-        // Populate the textviews with data.
+        // Populate the TextViews with data.
         holder.bindTo(currentSport);
     }
 
@@ -127,8 +126,7 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
             mInfoText.setText(currentSport.getInfo());
 
             // Load the images into the ImageView using the Glide library.
-            Glide.with(mContext).load(
-                    currentSport.getImageResource()).into(mSportsImage);
+            Glide.with(mContext).load(currentSport.getImageResource()).into(mSportsImage);
 
         }
 
@@ -141,9 +139,10 @@ class SportsAdapter extends RecyclerView.Adapter<SportsAdapter.ViewHolder>  {
         public void onClick(View view) {
             Sport currentSport = mSportsData.get(getAdapterPosition());
             Intent detailIntent = new Intent(mContext, DetailActivity.class);
+
             detailIntent.putExtra("title", currentSport.getTitle());
-            detailIntent.putExtra("image_resource",
-                    currentSport.getImageResource());
+            detailIntent.putExtra("image_resource", currentSport.getImageResource());
+
             mContext.startActivity(detailIntent);
         }
     }

@@ -49,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
         int gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
 
         // Set the Layout Manager.
-        mRecyclerView.setLayoutManager(new GridLayoutManager(
-                this, gridColumnCount));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
 
         // Initialize the ArrayList that will contain the data.
         mSportsData = new ArrayList<>();
@@ -72,11 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Helper class for creating swipe to dismiss and drag and drop
         // functionality
-        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper
-                .SimpleCallback(
-                  ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT | 
-                  ItemTouchHelper.DOWN | ItemTouchHelper.UP,
-                swipeDirs) {
+        ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
+                  ItemTouchHelper.DOWN | ItemTouchHelper.UP, swipeDirs) {
             /**
              * Defines the drag and drop functionality.
              *
@@ -87,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
              * @return returns true if the item was moved, false otherwise
              */
             @Override
-            public boolean onMove(RecyclerView recyclerView,
-                                  RecyclerView.ViewHolder viewHolder,
-                                  RecyclerView.ViewHolder target) {
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
                 // Get the from and to positions.
                 int from = viewHolder.getAdapterPosition();
                 int to = target.getAdapterPosition();
@@ -125,12 +119,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initializeData() {
         // Get the resources from the XML file.
-        String[] sportsList = getResources()
-                .getStringArray(R.array.sports_titles);
-        String[] sportsInfo = getResources()
-                .getStringArray(R.array.sports_info);
-        TypedArray sportsImageResources =
-                getResources().obtainTypedArray(R.array.sports_images);
+        String[] sportsList = getResources().getStringArray(R.array.sports_titles);
+        String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
+        TypedArray sportsImageResources = getResources().obtainTypedArray(R.array.sports_images);
 
         // Clear the existing data (to avoid duplication).
         mSportsData.clear();

@@ -24,6 +24,7 @@ class Sport {
     // Member variables representing the title and information about the sport.
     private String title;
     private String info;
+
     private final int imageResource;
 
     /**
